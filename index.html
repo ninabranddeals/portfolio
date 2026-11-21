@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nina Carter — A digital lifestyle publication</title>
+<meta name="description" content="Nina Carter is a fictional AI-generated lifestyle muse. Fashion, travel and everyday inspiration told through a digital lens.">
+<meta property="og:title" content="Nina Carter — A world of style, seen through a digital lens">
+<meta property="og:description" content="A fictional AI-generated lifestyle muse exploring fashion, travel and everyday inspiration.">
+<meta property="og:type" content="website"><meta property="og:image" content="OG_IMAGE_URL_PLACEHOLDER">
+<link rel="canonical" href="https://CANONICAL-URL-PLACEHOLDER/">
+<style>
+:root{--bg:#f7f1e6;--bg2:#efe6d6;--ink:#2a211b;--mute:#6b5e52;--acc:#b99a6b;--line:#d9ccb8;--dark:#262b33;--darkink:#f3ece0;--card:#fbf7ef;
+--serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;--sans:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#1c1814;--bg2:#252019;--ink:#f1e9dc;--mute:#b3a592;--acc:#cdb085;--line:#3b342b;--card:#221d17;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#1c1814;--bg2:#252019;--ink:#f1e9dc;--mute:#b3a592;--acc:#cdb085;--line:#3b342b;--card:#221d17;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--sans);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+img{max-width:100%;display:block}a{color:inherit}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-.01em;margin:0 0 .5em}
+h1{font-size:clamp(2.3rem,7vw,4.6rem)}h2{font-size:clamp(1.8rem,4.5vw,3rem)}h3{font-size:1.35rem}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}.sec{padding:72px 0}
+.eyebrow{font:600 .72rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--acc);margin:0 0 14px}
+.mute{color:var(--mute)}
+:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{font:500 1.4rem var(--serif);text-decoration:none;letter-spacing:.02em}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;align-items:center}
+nav a{text-decoration:none;font-size:.9rem;padding:8px 2px;border-bottom:1px solid transparent}nav a[aria-current],nav a:hover{border-color:var(--acc)}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);border:1px solid var(--ink);padding:13px 24px;font:600 .88rem var(--sans);text-decoration:none;border-radius:999px;cursor:pointer;min-height:44px}
+.btn.alt{background:transparent;color:var(--ink);border-color:var(--ink)}.btn:hover{opacity:.85}
+#mb{display:none;background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:0 16px;min-height:44px;font:600 .85rem var(--sans);cursor:pointer}
+@media(max-width:900px){#mb{display:block}nav{display:none;position:absolute;left:0;right:0;top:64px;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 20px 20px}nav.open{display:block}nav ul{flex-direction:column;align-items:stretch;gap:0}nav a{display:block;padding:14px 0;border-bottom:1px solid var(--line)}}
+.hero{display:grid;gap:36px;align-items:center;padding:48px 0 64px;position:relative}
+@media(min-width:900px){.hero{grid-template-columns:1.1fr .9fr}}
+.badge{display:inline-block;border:1px solid var(--acc);color:var(--acc);padding:5px 14px;border-radius:999px;font:600 .75rem var(--sans);letter-spacing:.08em;margin-bottom:20px}
+.ring{position:absolute;border:1px solid var(--line);border-radius:50%;pointer-events:none;z-index:0}
+.frame{position:relative;border-radius:200px 200px 8px 8px;overflow:hidden;aspect-ratio:3/4;background:var(--bg2);max-width:460px;margin:0 auto;width:100%}
+.frame img,.card img{width:100%;height:100%;object-fit:cover}
+.note{font-size:.82rem;color:var(--mute);margin-top:18px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.grid{display:grid;gap:22px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.card .im{aspect-ratio:4/5;overflow:hidden;background:var(--bg2);width:100%}
+.card .tx{padding:18px}.card p{margin:.3em 0 0;color:var(--mute);font-size:.92rem}
+button.card{text-align:left;padding:0;font:inherit;color:inherit;cursor:pointer}
+.dark{background:var(--dark);color:var(--darkink)}.dark .mute{color:#b9b3a8}.dark .btn{background:var(--darkink);color:var(--dark);border-color:var(--darkink)}.dark .btn.alt{background:transparent;color:var(--darkink)}
+.cat{border-top:1px solid var(--line);padding:18px 0}.cat h3{margin:0 0 4px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 30px}
+.filters button{border:1px solid var(--line);background:none;color:var(--ink);padding:10px 18px;border-radius:999px;cursor:pointer;min-height:44px;font:inherit;font-size:.9rem}
+.filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.price{font:500 2.4rem var(--serif)}.price small{font:.9rem var(--sans);color:var(--mute)}
+.tier{padding:28px;display:flex;flex-direction:column;gap:6px}.tier ul{padding-left:18px;margin:10px 0 20px;flex:1}.tier.pop{border:2px solid var(--acc);position:relative}
+.tag{position:absolute;top:-13px;left:24px;background:var(--acc);color:#1c1814;font:700 .72rem var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px}
+.warn{border:1px solid var(--acc);background:var(--bg2);padding:14px 18px;border-radius:8px;font-size:.92rem}
+form{display:grid;gap:18px;max-width:520px}label,legend{font-weight:600;font-size:.9rem;display:block;margin-bottom:6px}
+input[type=text],input[type=email],select{width:100%;padding:13px 14px;border:1px solid var(--mute);border-radius:6px;background:var(--card);color:var(--ink);font:inherit;min-height:48px}
+.err{color:#b3261e;font-size:.85rem;margin-top:6px}@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .err{color:#ff9a90}}
+.chk{display:flex;gap:12px;align-items:flex-start;font-weight:400}.chk input{width:22px;height:22px;margin-top:2px;flex:none}
+.ok{border:1px solid var(--acc);padding:20px;border-radius:8px;background:var(--bg2)}
+details{border-top:1px solid var(--line);padding:16px 0}summary{cursor:pointer;font:500 1.15rem var(--serif);min-height:32px}
+.prose{max-width:720px}.prose p,.prose li{color:var(--ink)}
+.two{display:grid;gap:40px;align-items:center}@media(min-width:900px){.two{grid-template-columns:1fr 1fr}}
+footer{border-top:1px solid var(--line);padding:48px 0 32px;background:var(--bg2);font-size:.9rem}
+.fg{display:grid;gap:30px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}footer ul{list-style:none;padding:0;margin:0}footer li{padding:5px 0}
+dialog{border:0;padding:0;background:var(--card);color:var(--ink);max-width:min(94vw,560px);max-height:92vh;border-radius:10px;overflow:auto}dialog::backdrop{background:rgba(20,15,10,.8)}
+dialog img{width:100%;max-height:68vh;object-fit:contain;background:var(--bg2)}.dc{padding:18px 22px 22px}
+.x{position:absolute;top:10px;right:10px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:999px;width:44px;height:44px;font-size:1.2rem;cursor:pointer}
+.fade{animation:f .7s ease both}@keyframes f{from{opacity:0;transform:translateY(10px)}}
+@media(prefers-reduced-motion:reduce){.fade{animation:none}html{scroll-behavior:auto}}
+</style></head><body>
+<a href="#main" class="btn" style="position:absolute;left:-999px" onfocus="this.style.left='8px'" onblur="this.style.left='-999px'">Skip to content</a>
+<header><div class="wrap bar"><a class="logo" href="#home">Nina Carter</a>
+<button id="mb" aria-expanded="false" aria-controls="nav">Menu</button>
+<nav id="nav" aria-label="Main"><ul>
+<li><a href="#home">Home</a></li><li><a href="#journal">The Journal</a></li><li><a href="#collections">Collections</a></li><li><a href="#membership">Membership</a></li><li><a href="#about">About</a></li><li><a href="#faq">FAQ</a></li>
+</ul></nav></div></header>
+<main id="main" tabindex="-1"></main>
+<footer><div class="wrap"><div class="fg">
+<div><a class="logo" href="#home">Nina Carter</a><p class="mute">Nina Carter is a fictional AI-generated persona. All images and stories are digitally created. Not a real person.</p></div>
+<div><strong>Explore</strong><ul><li><a href="#collections">Collections</a></li><li><a href="#journal">The Journal</a></li><li><a href="#membership">Membership</a></li><li><a href="#about">About Nina</a></li><li><a href="#faq">FAQ</a></li></ul></div>
+<div><strong>Legal (drafts)</strong><ul><li><a href="#terms">Terms of Service</a></li><li><a href="#privacy">Privacy Policy</a></li><li><a href="#refunds">Refund &amp; Cancellation</a></li></ul></div>
+<div><strong>Follow &amp; contact</strong><ul><li><a href="https://web.facebook.com/profile.php?id=61596328761627" target="_blank" rel="noopener noreferrer">Facebook</a></li><li><a href="https://www.instagram.com/itsmeninacarter/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a href="https://x.com/NinaCartervo" target="_blank" rel="noopener noreferrer">X</a></li></ul></div></div>
+<p class="mute" style="margin-top:30px">© [Operator name placeholder]. Pre-launch preview. Membership launch is subject to payment-provider approval.</p></div></footer>
+<dialog id="lb" aria-label="Image viewer"><button class="x" id="lbx" aria-label="Close image">×</button><img id="lbi" alt=""><div class="dc"><h3 id="lbt"></h3><p id="lbd" class="mute" style="margin:0"></p></div></dialog>
+<script>
+const IMG={hero:"assets/nina-hero.jpg",promenade:"assets/nina-promenade.jpg",courtyard:"assets/nina-courtyard.jpg",terrace:"assets/nina-terrace.jpg",lobby:"assets/nina-lobby.jpg",mountain:"assets/nina-mountain.jpg",gallery:"assets/nina-gallery.jpg",garden:"assets/nina-garden.jpg",water:"assets/nina-water.jpg"};
+const ALT={hero:"AI-generated image of Nina Carter in a cream linen shirt and wide trousers beside a reflecting pool and lattice dome",promenade:"AI-generated image of Nina Carter walking in neutral linen beneath a lattice canopy",courtyard:"AI-generated image of Nina Carter with a coffee and a museum guide beside a pool",terrace:"AI-generated image of Nina Carter in an orange ruffled dress at a sunset terrace",lobby:"AI-generated image of Nina Carter in an ivory ensemble on a bouclé sofa",mountain:"AI-generated image of Nina Carter in activewear overlooking terraced mountain hills",gallery:"AI-generated image of Nina Carter admiring a framed painting in a gallery",garden:"AI-generated image of Nina Carter in white linen on a rose velvet sofa among plants",water:"AI-generated close portrait of Nina Carter by the water in a cream linen shirt"};
+const COLS=[
+["City in Neutral","Fashion","promenade","Refined city styling, warm neutrals and architectural backdrops."],
+["Coastal Light","Travel","hero","Coastal scenery, relaxed fashion and sunlit editorial moods."],
+["The Everyday Edit","Lifestyle","courtyard","Everyday moments, interiors, coffee and personal style."],
+["Weekend Escape","Travel","terrace","Travel-inspired looks, resort settings and relaxed luxury."],
+["Modern Muse","Fashion","lobby","Contemporary fashion, elegant silhouettes and editorial portraits."],
+["Wellness Mornings","Wellness","mountain","Movement, healthy routines and calm morning scenes."],
+["Gallery Hours","Lifestyle","gallery","A visual essay on art, light and quiet interiors."],
+["Garden Lounge","Lifestyle","garden","Soft textures, greenery and relaxed evening styling."],
+["Water’s Edge","Travel","water","A close portrait study in sunlit linen and reflected light."]];
+const CATS=[["Fashion Notes","Modern styling, outfits, accessories and fashion inspiration."],["The Travel Edit","Travel-inspired editorials, destinations, hotels, architecture and scenery."],["Everyday Moments","Coffee, reading, shopping, interiors and everyday lifestyle inspiration."],["Wellness & Rituals","Fitness-inspired lifestyle, yoga, healthy routines and wellbeing inspiration."]];
+const JR=[
+["Building a timeless neutral wardrobe","Fashion","21 Nov 2026","gallery","A styling note on the quiet power of cream, sand and espresso.",["This is a fictional editorial concept: a wardrobe built from a handful of warm neutrals that mix without effort.","Start with texture rather than pattern — linen, bouclé, brushed cotton — and let silhouette do the talking. Wide trousers, a relaxed shirt and one structured bag form a complete visual language.","The images that accompany this essay are digitally created to explore the idea."]],
+["The art of packing a weekend edit","Travel","14 Nov 2026","terrace","A travel-inspired concept for a small, versatile capsule.",["A visual essay imagining a weekend away. Nina is a fictional persona and did not travel; the scenes are digital creations.","The concept: three tops, two bottoms, one dress and a single pair of shoes that moves from morning to evening."]],
+["Small rituals for a calmer morning","Wellness","7 Nov 2026","mountain","Gentle, wellbeing-inspired ideas for starting the day slowly.",["A creative moodboard of slow mornings: natural light, a green smoothie, movement and a view.","This is inspiration, not medical or health advice."]],
+["How a fashion editorial concept comes together","Behind the scenes","31 Oct 2026","lobby","From moodboard to final frame in an AI-assisted workflow.",["Every Nina Carter image begins as an idea: a palette, a setting, a silhouette.","Images are created with AI-assisted tools, then selected and refined for consistency of character and tone."]],
+["Colour, texture and silhouette: a visual styling note","Fashion","24 Oct 2026","courtyard","How three simple elements shape an editorial look.",["Colour sets the mood, texture adds depth and silhouette gives shape. This note explores each through the Everyday Edit collection."]],
+["A digital moodboard inspired by coastal light","Travel","17 Oct 2026","hero","Sunlit water, pale stone and linen — a visual concept.",["Imagine a morning of pale stone, shimmering water and soft linen. This moodboard is a digital concept, not a real location report."]]];
+const TIERS=[["Nina Premium","$9.99","/month",["25–30 exclusive images per month","Full monthly themed collection","5 premium phone wallpapers","Behind-the-scenes creative posts","Member voting on upcoming creative concepts","Early access to new collections"],1]];
+const LEGALNOTE='<p class="warn"><strong>Draft policy — requires owner review and appropriate legal review before launch.</strong></p>';
+const PH='[placeholder]';
+const LEGAL={
+terms:["Terms of Service",`<h3>1. About this site</h3><p>This pre-launch website presents Nina Carter, a fictional AI-generated persona. Content is non-explicit fashion, lifestyle, travel and wellness-inspired editorial material.</p><h3>2. Membership</h3><p>Paid membership is on your own willing subscription.</p><h3>3. Digital content</h3><p>Content is provided for personal, non-commercial viewing.</p>`],
+privacy:["Privacy Policy",`<h3>What the pre-launch waitlist may collect</h3><ul><li>Name, if voluntarily supplied</li><li>Email address</li><li>Membership tier of interest</li><li>Consent to receive launch information</li></ul><h3>Payment information</h3><p>This pre-launch website does not collect payment information.</p><h3>Storage and sharing</h3><p>[Storage location, retention, processors and sharing details to be completed once the waitlist backend is implemented and verified.] Registration details reach the site team only when the visitor sends the pre-filled email from their own email app; this website itself stores nothing.</p><h3>Your choices</h3><p>[Contact and rights details ${PH}]</p>`],
+refunds:["Refund & Cancellation Policy",`<p>Operator: [Business/operator name ${PH}] · Contact: [Email ${PH}] · Effective date: [${PH}]</p><h3>Refunds</h3><p>No refund will be provided for the subscribed month.</p><h3>Cancellation</h3><p>You can cancel at any time.</p>`]};
+const FAQ=[["Is Nina Carter a real person?","No. Nina Carter is a fictional digital persona created using AI-assisted creative workflows."],["What kind of content does Nina share?","Fashion, travel-inspired editorials, lifestyle imagery, wellness inspiration and digital creative collections."],["What do members receive?","Benefits depend on the selected tier and may include curated image collections, wallpapers, behind-the-scenes creative posts and digital editorials."],["Is the content explicit?","No. The brand focuses on non-explicit fashion, lifestyle, travel and wellness-inspired editorial content."],["Is membership open now?","Not yet. Membership launch is subject to payment-provider approval. Visitors can register interest through the early-access form."],["Can I cancel a membership?","Yes, you can cancel anytime."],["How are the images created?","Nina’s visual world is created through AI-assisted digital creative workflows."],["Are the gallery images the full membership collection?","No. The public gallery is a preview of the brand’s visual direction. Membership benefits and future releases are described separately."]];
+const $=s=>document.querySelector(s),M=$("#main");let tier="Not sure yet";
+const im=(k,l)=>`<img src="${IMG[k]}" alt="${ALT[k]}" width="800" height="1067" ${l?'loading="lazy" decoding="async"':'fetchpriority="high"'}>`;
+const disc='<p class="note">Nina is a fictional AI persona. Images and stories are digitally created.</p>';
+const colCard=(c,i)=>`<button class="card" data-i="${i}" data-c="${c[1]}"><div class="im">${im(c[2],1)}</div><div class="tx"><p class="eyebrow" style="margin:0">${c[1]}</p><h3 style="margin:4px 0 0">${c[0]}</h3><p>${c[3]}</p></div></button>`;
+const tierBtn=(t,l)=>`<a class="btn${t==="Nina Premium"?"":" alt"}" href="#early-access" data-tier="${t}">${l||"Join the early-access list"}</a>`;
+const head=(e,t,p)=>`<p class="eyebrow">${e}</p><h1 style="font-size:clamp(2rem,5.5vw,3.6rem)">${t}</h1>${p?`<p class="mute prose">${p}</p>`:""}`;
+const pricing=()=>`<div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:36px">${TIERS.map(t=>`<div class="card tier${t[4]?" pop":""}">${t[4]?'<span class="tag">Most Popular</span>':""}<h3>${t[0]}</h3><div class="price">${t[1]}<small>${t[2]}</small></div><ul>${t[3].map(x=>`<li>${x}</li>`).join("")}</ul>${tierBtn(t[0],"Register interest")}</div>`).join("")}</div>
+<div class="card tier" style="margin-top:22px"><h3>Nina Premium Annual</h3><div class="price">$99.99<small>/year</small></div><p class="mute" style="margin:0">Billed once a year — approximately $8.33/month averaged across the year. This is annual billing, not monthly billing. Includes everything in Nina Premium.</p><div style="margin-top:14px">${tierBtn("Nina Premium","Register interest")}</div></div>
+<div class="warn" style="margin-top:22px"><strong>Refund:</strong> No refund will be provided for the subscribed month.<br><strong>Cancel:</strong> You can cancel at any time.</div>`;
+const R={
+home:()=>`<div class="wrap hero fade"><div class="ring" style="width:520px;height:520px;right:-180px;top:-60px"></div><div style="position:relative;z-index:1"><span class="badge">AI-generated fictional persona</span><h1>A world of style, seen through a digital lens.</h1><p class="mute" style="font-size:1.1rem;max-width:520px">Meet Nina Carter — a fictional AI-generated lifestyle muse exploring fashion, travel and everyday inspiration.</p><div class="ctas"><a class="btn" href="#collections">Explore the collections</a><a class="btn alt" href="#membership">Discover membership</a></div>${disc}</div><div class="frame" style="position:relative;z-index:1">${im("hero")}</div></div>
+<section class="sec" style="background:var(--bg2)"><div class="wrap"><p class="eyebrow">The editorial world</p><h2>Four pillars</h2><div>${CATS.map(c=>`<div class="cat"><h3>${c[0]}</h3><span class="mute">${c[1]}</span></div>`).join("")}</div></div></section>
+<section class="sec"><div class="wrap"><p class="eyebrow">Featured collections · Preview</p><h2>Selected collections</h2><div class="grid" style="margin-top:28px">${COLS.slice(0,6).map((c,i)=>colCard(c,i)).join("")}</div><div class="ctas"><a class="btn alt" href="#collections">View all collections</a></div></div></section>
+<section class="sec dark"><div class="wrap two"><div><p class="eyebrow">Membership · Proposed</p><h2>Curated digital collections and editorial extras</h2><p class="mute">Nina Premium — <strong style="color:var(--darkink)">$9.99/month</strong>. Membership is not yet open for payment.</p><div class="ctas"><a class="btn" href="#membership">View membership details</a></div></div></div></section>`,
+collections:()=>`<div class="wrap sec fade">${head("Collections · Preview","The collections","This public gallery is a preview of our visual direction — it is not the membership collection.")}<div class="filters" role="group" aria-label="Filter collections">${["All","Fashion","Travel","Lifestyle","Wellness"].map((f,i)=>`<button data-f="${f}" aria-pressed="${i==0}">${f}</button>`).join("")}</div><div class="grid" id="gal">${COLS.map((c,i)=>colCard(c,i)).join("")}</div><p class="note">All images are AI-generated. Nina Carter is a fictional persona.</p></div>`,
+journal:()=>`<div class="wrap sec fade">${head("The Journal","Editorial inspiration","Fictional stories, creative concepts and visual essays. Nina is an AI-generated persona and does not travel or attend events.")}<div class="grid" style="margin-top:30px">${JR.map((a,i)=>`<a class="card" href="#journal-${i+1}" style="text-decoration:none"><div class="im" style="aspect-ratio:3/2">${im(a[3],1)}</div><div class="tx"><p class="eyebrow" style="margin:0">${a[1]} · ${a[2]}</p><h3 style="margin:6px 0 0">${a[0]}</h3><p>${a[4]}</p><p style="color:var(--acc);font-weight:600">Read more →</p></div></a>`).join("")}</div></div>`,
+article:i=>{const a=JR[i];return`<article class="wrap sec fade prose"><a href="#journal">← The Journal</a><p class="eyebrow" style="margin-top:28px">${a[1]} · ${a[2]}</p><h1 style="font-size:clamp(2rem,5vw,3.2rem)">${a[0]}</h1><div style="aspect-ratio:3/2;overflow:hidden;border-radius:8px;margin:24px 0">${im(a[3])}</div>${a[5].map(p=>`<p>${p}</p>`).join("")}<p class="note">Fictional editorial concept. Images are digitally created.</p></article>`},
+membership:()=>`<div class="wrap sec fade">${head("Membership · Proposed","Membership tiers","Proposed tiers and prices for curated digital content. Nothing here can be purchased yet.")}${pricing()}</div>`,
+about:()=>`<div class="wrap sec fade two"><div class="frame">${im("courtyard")}</div><div><p class="eyebrow">About</p><h1 style="font-size:clamp(2rem,5vw,3.4rem)">Meet Nina Carter</h1><p>Nina Carter is a fictional AI-generated digital lifestyle persona created to explore fashion, travel, wellness and everyday inspiration through visual storytelling. Her world brings together editorial fashion concepts, carefully curated lifestyle imagery and creative digital collections.</p><p class="warn">Nina is not a real person, model or traveller. All imagery is created with AI-assisted workflows.</p><h3>Four pillars</h3>${CATS.map(c=>`<p style="margin:.4em 0"><strong>${c[0]}</strong> — <span class="mute">${c[1]}</span></p>`).join("")}</div></div>`,
+faq:()=>`<div class="wrap sec fade prose">${head("FAQ","Questions & answers")}<div style="margin-top:20px">${FAQ.map(f=>`<details><summary>${f[0]}</summary><p class="mute">${f[1]}</p></details>`).join("")}</div></div>`,
+"early-access":()=>`<div class="wrap sec fade">${head("Early access","Register your interest","Membership launch is subject to payment-provider approval.")}<div class="warn" style="max-width:520px;margin:22px 0">This form opens your email app with a pre-filled message to our team. You need to press Send in your email app to complete your registration. No payment details are collected.</div><div id="fw"><form id="ef" novalidate><div><label for="nm">Name (optional)</label><input type="text" id="nm" autocomplete="name"></div><div><label for="em">Email address (required)</label><input type="email" id="em" autocomplete="email" aria-describedby="eme" required><div class="err" id="eme" role="alert"></div></div><div><label for="ti">Membership interest</label><select id="ti">${["Nina Premium","Not sure yet"].map(t=>`<option${t==tier?" selected":""}>${t}</option>`).join("")}</select></div><div><label class="chk"><input type="checkbox" id="cn" aria-describedby="cne"><span>I agree to be contacted about the membership launch. See the <a href="#privacy">Privacy Policy</a>.</span></label><div class="err" id="cne" role="alert"></div></div><button class="btn" type="submit">Register interest</button></form></div></div>`};
+function legal(k){const[t,b]=LEGAL[k];return`<div class="wrap sec fade prose"><h1 style="font-size:clamp(2rem,5vw,3.2rem)">${t}</h1>${k=="refunds"?LEGALNOTE:""}${b}</div>`}
+const TT={home:"Nina Carter — A digital lifestyle publication",collections:"Collections (preview) — Nina Carter",journal:"The Journal — Nina Carter",membership:"Membership — Nina Carter",about:"About Nina — Nina Carter",faq:"FAQ — Nina Carter","early-access":"Early Access — Nina Carter",terms:"Terms of Service (draft) — Nina Carter",privacy:"Privacy Policy (draft) — Nina Carter",refunds:"Refund & Cancellation (draft) — Nina Carter"};
+function route(){let h=location.hash.slice(1)||"home",m=h.match(/^journal-(\d)$/);
+if(m&&JR[m[1]-1]){M.innerHTML=R.article(m[1]-1);document.title=JR[m[1]-1][0]+" — Nina Carter"}
+else if(LEGAL[h]){M.innerHTML=legal(h);document.title=TT[h]}
+else{if(!R[h]||h=="article")h="home";M.innerHTML=R[h]();document.title=TT[h]}
+$("#nav").classList.remove("open");$("#mb").setAttribute("aria-expanded","false");$("#mb").textContent="Menu";
+document.querySelectorAll("nav a[href]").forEach(a=>a.toggleAttribute("aria-current",a.getAttribute("href")=="#"+h));
+let d=document.querySelector('meta[name=description]');d.content="Nina Carter is a fictional AI-generated lifestyle muse. "+document.title;
+scrollTo(0,0)}
+addEventListener("hashchange",route);
+document.addEventListener("click",e=>{
+const t=e.target.closest("[data-tier]");if(t)tier=t.dataset.tier;
+const f=e.target.closest("[data-f]");if(f){document.querySelectorAll("[data-f]").forEach(b=>b.setAttribute("aria-pressed",b==f));document.querySelectorAll("#gal .card").forEach(c=>c.hidden=!(f.dataset.f=="All"||c.dataset.c==f.dataset.f))}
+const c=e.target.closest("button.card");if(c){const x=COLS[c.dataset.i];lb.opener=c;$("#lbi").src=IMG[x[2]];$("#lbi").alt=ALT[x[2]];$("#lbt").textContent=x[0];$("#lbd").textContent=x[3]+" (Preview · AI-generated)";lb.showModal();$("#lbx").focus()}
+if(e.target==lb)lb.close()});
+const lb=$("#lb");$("#lbx").onclick=()=>lb.close();lb.addEventListener("close",()=>lb.opener&&lb.opener.focus());
+$("#mb").onclick=()=>{const o=$("#nav").classList.toggle("open");$("#mb").setAttribute("aria-expanded",o);$("#mb").textContent=o?"Close":"Menu"};
+addEventListener("keydown",e=>{if(e.key=="Escape"&&$("#nav").classList.contains("open")){$("#mb").click();$("#mb").focus()}});
+document.addEventListener("submit",e=>{if(e.target.id!="ef")return;e.preventDefault();const em=$("#em"),cn=$("#cn");let bad=0;
+const ok=/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim());
+$("#eme").textContent=ok?"":(em.value?"Please enter a valid email address, for example name@example.com.":"Please enter your email address.");em.setAttribute("aria-invalid",!ok);
+$("#cne").textContent=cn.checked?"":"Please tick the box to agree to be contacted.";
+if(!ok){em.focus();return}if(!cn.checked){cn.focus();return}const mh="mailto:ninabranddeals@gmail.com?subject="+encodeURIComponent("Interest registration")+"&body="+encodeURIComponent("Name: "+$("#nm").value.trim()+"\nEmail: "+em.value.trim()+"\nInterest: "+$("#ti").value+"\nI agree to be contacted about the membership launch.");try{location.href=mh}catch(x){}
+$("#fw").innerHTML=`<div class="ok" role="status" tabindex="-1" id="okm"><h3>Almost done — please send the email</h3><p>Your email app should have opened with a pre-filled message to ninabranddeals@gmail.com. Press <strong>Send</strong> there to register your interest — nothing is sent until you do. If it didn’t open, <a href="${mh}">click here</a>.</p><p><a href="#home">Back to home</a></p></div>`;$("#okm").focus()});
+route();
+</script></body></html>
